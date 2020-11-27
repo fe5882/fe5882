@@ -22,9 +22,11 @@ group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
-bootJar.enabled = false
-jar.enabled = true
-
+bootJar {
+    from('./src/main/ebextensions'){
+        into('.ebextensions')
+    }
+}
 
 repositories {
     mavenCentral()
