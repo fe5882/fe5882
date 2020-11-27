@@ -22,10 +22,13 @@ group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
-bootJar {
-    from('./src/main/ebextensions'){
-        into('.ebextensions')
-    }
+tasks.jar{
+    enabled = false
+}
+
+tasks.bootJar{
+    enabled = true
+    mainClassName = "com.jojoldu.book.springboot.Application"
 }
 
 repositories {
