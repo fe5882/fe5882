@@ -22,17 +22,10 @@ group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
-tasks.jar{
-    enabled = false
-}
-
-tasks.bootJar{
-    enabled = true
-    mainClassName = "com.jojoldu.book.springboot.Application"
-}
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -43,6 +36,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-mustache')
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     compile('org.springframework.session:spring-session-jdbc')
+    compile('org.mariadb.jdbc:mariadb-java-client')
     testCompile('org.springframework.security:spring-security-test')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
