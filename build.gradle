@@ -22,13 +22,6 @@ group 'com.jojoldu.book'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 
-jar {
-    enabled = true
-}
-
-bootJar{
-    classifier = 'boot'
-}
 
 
 repositories {
